@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 100px;
+  font-family: monospace;
+  font-size: 1.2em;
+}
+
+h1 {
+  text-align: center;
+}
+
+textarea {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 80%;
+  font-size: 1.3em;
+}
+
+details {
+  width: 80%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.spacing {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.indicator {
+  text-align: center;
+  padding: 10px;
+  height: 40px;
+}
+
+.success {
+  background-color: lightgreen;
+}
+
+.failure {
+  background-color: salmon;
+}
+
+.targetWordContainer, .buttonContainer {
+  font-size: 1.5em;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.targetWordContainer {
+  width: 80%;
+}
+
+.buttonContainer {
+  max-width: 300px;
+  text-align: center;
+}
+
+.addWords {
+  font-weight: bold;
+}
+
+.targetWord {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.targetWord div.done {
+  background-color: lightgreen;
+}
+
+.targetWord div.pending {
+  background-color: lightgrey;
+}
+
+.targetWord div.notChar {
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.footer {
+  margin-top: 80px;
+  text-align: center;
+}

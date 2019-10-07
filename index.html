@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Keyboard Training</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>SUPER SIMPLE TYPING PRACTICE</h1>
+
+    <div class="indicator"></div>
+
+    <div class="targetWordContainer center spacing">
+      <div class="targetWord"></div>
+    </div>
+
+    <textarea class="targetWords" rows="5" cols="80"></textarea>
+
+    <div class="buttonContainer center spacing">
+      <button type="button" class="addWords">
+        START PRACTICING USING THE SEQUENCES ABOVE</button>
+      <button type="button" class="loadWords">LOAD FROM LOCALSTORAGE</button>
+      <button type="button" class="saveWords">SAVE TO LOCALSTORAGE</button>
+    </div>
+
+    <details class="center">
+      <summary>How to use:</summary>
+      <p>
+        Click "start pracicing using the sequences above" if you wish to use the default practice sequence. You can also enter your own sequence, described below.
+      </p>
+      <p>
+        As demonstrated in the default sequence above, you can add single characters and words to the sequence array, surrounded by double-quotes. If you want to practice with non-character keys such as the arrow keys, tab, etc, you can add them as elements of a sub-array. They must be spelled as you see here.
+      </p>
+      <p>
+        Click the "save to localstorage" button to save your custom training sequence to your browser's storage. Click "load from localstorage" to restore from your browser's storage.
+      </p>
+      <p>
+        <b>
+          NOTE! If you attempt to add control key sequences like "Alt-F4" or "Control-w" or "Control-n" and other such system or app-level combos, you WILL perform these actions (closing the window, the tab, opening a new tab, etc). These combos will vary for your browser and OS, so please take care. Also, you can't train on SHIFT alone... only in combos ala "Shift-ArrowUp" and of course upper-case characters and special characters ala "$".
+        </b>
+      </p>
+      <p>
+        Also Note: There is no "end". This will just loop through the given sequence forever.
+      </p>
+    </details>
+
+    <div class="footer">Made with like by brodavi — fork or suggest edits on
+      <a href="https://github.com/brodavi/supersimpletypingpractice" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <script src="index.js" charset="utf-8"></script>
+  </body>
+</html>
