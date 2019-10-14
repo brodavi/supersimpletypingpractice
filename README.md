@@ -21,3 +21,7 @@ You will want to run a simple http server to serve the files. That is all that i
 
 
 [https://www.lighttpd.net/](https://www.lighttpd.net/)
+
+## Notes on upgrade
+
+This update requires a new method of adding control keys like arrows, tabs, etc. They should not be in their own arrays anymore, but just treated like any other string sequence. However they must be separated by the interpunct: "·".

@@ -20,6 +20,7 @@ textarea {
 }
 
 details {
+  margin-top: 20px;
   width: 80%;
   padding: 10px;
   border: 2px solid black;
@@ -51,14 +52,14 @@ details {
   background-color: salmon;
 }
 
-.targetWordContainer, .buttonContainer {
+.targetSequenceContainer, .buttonContainer {
   font-size: 1.5em;
   border: 2px solid black;
   border-radius: 10px;
   padding: 15px;
 }
 
-.targetWordContainer {
+.targetSequenceContainer {
   width: 80%;
 }
 
@@ -67,31 +68,40 @@ details {
   text-align: center;
 }
 
-.addWords {
+.addSequence {
   font-weight: bold;
 }
 
-.targetWord {
+.targetSequence {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.targetWord div.done {
+.targetSequence div.done {
   background-color: lightgreen;
 }
 
-.targetWord div.pending {
+.targetSequence div.pending {
   background-color: lightgrey;
 }
 
-.targetWord div.notChar {
+.targetSequence div.notChar {
   padding: 5px;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 10px;
   border: 2px solid black;
   border-radius: 5px;
+}
+
+.addKinesisTraining {
+  cursor: pointer;
+  font-weight: bold;
+  margin: 5px;
+  text-transform: uppercase;
+  border: 2px solid black;
+  margin: 5px;
 }
 
 .footer {

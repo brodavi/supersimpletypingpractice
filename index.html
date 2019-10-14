@@ -11,26 +11,29 @@
 
     <div class="indicator"></div>
 
-    <div class="targetWordContainer center spacing">
-      <div class="targetWord"></div>
+    <div class="targetSequenceContainer center spacing">
+      <div class="targetSequence"></div>
     </div>
 
-    <textarea class="targetWords" rows="5" cols="80"></textarea>
+    <textarea class="targetSequences" rows="5" cols="80"></textarea>
 
     <div class="buttonContainer center spacing">
-      <button type="button" class="addWords">
+      <button type="button" class="addSequences">
         START PRACTICING USING THE SEQUENCES ABOVE</button>
-      <button type="button" class="loadWords">LOAD FROM LOCALSTORAGE</button>
-      <button type="button" class="saveWords">SAVE TO LOCALSTORAGE</button>
+      <button type="button" class="loadSequences">LOAD FROM LOCALSTORAGE</button>
+      <div>
+        <input type="checkbox" class="randomize" name="random" value=""> Randomize sequence?
+      </div>
+      <button type="button" class="saveSequences">SAVE TO LOCALSTORAGE</button>
     </div>
 
     <details class="center">
       <summary>How to use:</summary>
       <p>
-        Click "start pracicing using the sequences above" if you wish to use the default practice sequence. You can also enter your own sequence, described below.
+        Click "start practicing using the sequences above" if you wish to use the default practice sequences. You can also enter your own sequences, described below.
       </p>
       <p>
-        As demonstrated in the default sequence above, you can add single characters and words to the sequence array, surrounded by double-quotes. If you want to practice with non-character keys such as the arrow keys, tab, etc, you can add them as elements of a sub-array. They must be spelled as you see here.
+        As demonstrated in the default sequences above, you can add single characters or multiple characters to the sequence array, surrounded by double-quotes. If you want to practice with non-character keys such as the arrow keys, tab, etc, you can add them as specially-spelled words. They must be spelled exactly as you see here, and they must be separated by the interpunct: "·".
       </p>
       <p>
         Click the "save to localstorage" button to save your custom training sequence to your browser's storage. Click "load from localstorage" to restore from your browser's storage.
@@ -42,6 +45,12 @@
       </p>
       <p>
         Also Note: There is no "end". This will just loop through the given sequence forever.
+      </p>
+    </details>
+    <details class="center">
+      <summary>Useful for Kinesis Advantage2 users:</summary>
+      <p>
+        This PDF: <a href="https://www.micwil.com/images/additional_resources/training_materials_for_contoured_keyboards.pdf">https://www.micwil.com/images/additional_resources/training_materials_for_contoured_keyboards.pdf</a> has training materials for users of the Kinesis Advantage2. I have copied the training exercises in this app. Just click <span class="addKinesisTraining">HERE</span> to copy it to the sequences area and start the training.
       </p>
     </details>
 
