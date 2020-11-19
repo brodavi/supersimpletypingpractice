@@ -1,8 +1,8 @@
 'use strict';
 
-const specialKeys = ['ArrowArrowUp', 'ArrowArrowDown', 'ArrowArrowLeft', 'ArrowArrowRight', 'Tab', 'Backspace', 'Enter', 'Delete', 'Home', 'End', 'PageArrowUp', 'PageArrowDown']
+const specialKeys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Tab', 'Backspace', 'Enter', 'Delete', 'Home', 'End', 'PageUp', 'PageDown']
 
-const defaultSequences = ['[1, 2, 3, 4]', '{a: 1, b: 2}', '`${myvar}`', 'foo -r -e | bar', './start-server -c', 'cd ..; cd /test; npm run compile', '\\n whatever', '<div></div>', 'question? answer!', 'the quick, brown, fox jumped over the lazy dog', '50%', 'we are #1', 'example@example.com', 'for (let x = 0; x < 10; x++) { doThis(thisThing); }', "if __name__ == '__main__':", 'span.success { background-color: salmon; }', 'defp elixirc_paths(:test), do: ["lib", "test/sArrowUpport"]', '$40', '10^2', 'R&R', '10*3', 'function(call)', '10 - 5', '3 + 8', 'snake_case_like_this', 'var = 5;', '~/src/stuff', 'ArrowArrowUp·ArrowArrowUp·ArrowArrowDown·ArrowArrowDown·ArrowArrowLeft·ArrowArrowRight·ArrowArrowLeft·ArrowArrowRight·ba*', 'Control-a·Control-c·Control-v', 'Backspace·Backspace·ArrowArrowLeft·ArrowArrowRight·Tab·ArrowArrowUp·Tab·ArrowArrowDown·Enter', 'Delete·Home·Shift-End·Delete·Shift-Home·Backspace·PageArrowUp·PageArrowDown', 'Shift-ArrowArrowUp·Shift-ArrowArrowLeft', '1234567890', 'qwertyuiop', 'asdfghjkl;', 'zxcvbnm,./', '`[]=-', '·Tab·\\\'Backspace·Delete·Enter·Home·PageArrowUp·End·PageArrowDown', '+!@#$%^&*()_|"~:<>?{}']
+const defaultSequences = ['[1, 2, 3, 4]', '{a: 1, b: 2}', '`${myvar}`', 'foo -r -e | bar', './start-server -c', 'cd ..; cd /test; npm run compile', '\\n whatever', '<div></div>', 'question? answer!', 'the quick, brown, fox jumped over the lazy dog', '50%', 'we are #1', 'example@example.com', 'for (let x = 0; x < 10; x++) { doThis(thisThing); }', "if __name__ == '__main__':", 'span.success { background-color: salmon; }', 'defp elixirc_paths(:test), do: ["lib", "test/support"]', '$40', '10^2', 'R&R', '10*3', 'function(call)', '10 - 5', '3 + 8', 'snake_case_like_this', 'var = 5;', '~/src/stuff', 'ArrowUp·ArrowUp·ArrowDown·ArrowDown·ArrowLeft·ArrowRight·ArrowLeft·ArrowRight·ba*', 'Control-a·Control-c·Control-v', 'Backspace·Backspace·ArrowLeft·ArrowRight·Tab·ArrowUp·Tab·ArrowDown·Enter', 'Delete·Home·Shift-End·Delete·Shift-Home·Backspace·ArrowUp·ArrowDown', 'Shift-ArrowUp·Shift-ArrowLeft', '1234567890', 'qwertyuiop', 'asdfghjkl;', 'zxcvbnm,./', '`[]=-', '·Tab·Backspace·Delete·Enter·Home·ArrowUp·End·ArrowDown', '+!@#$%^&*()_|"~:<>?{}']
 
 const textArea = document.querySelector('.targetSequences')
 
@@ -21,7 +21,7 @@ let targetKeystrokeIDX // the current keystroke's index
  * Listen for the click to add sequences from the textarea
  */
 document.querySelector('.addSequences').addEventListener('click', (e) => {
-  // So that if a space or enter comes ArrowUp in the list, the user won't start all over
+  // So that if a space or enter comes up in the list, the user won't start all over
   e.target.blur()
 
   // Get an array of arrays of keystrokes from the text area
@@ -33,7 +33,7 @@ document.querySelector('.addSequences').addEventListener('click', (e) => {
     sequences = shuffle(sequences)
   }
 
-  // Set ArrowUp initial target sequence
+  // Set up initial target sequence
   targetSequenceIDX = 0
   targetSequence = sequences[targetSequenceIDX]
 
@@ -46,7 +46,7 @@ document.querySelector('.addSequences').addEventListener('click', (e) => {
 /**
  * When the user hits a key
  */
-document.onkeyArrowDown = function(e) {
+document.onkeydown = function(e) {
   const targetKeystroke = targetSequence[targetKeystrokeIDX]
 
   // If user is typing in the text area, let it do its thing
@@ -68,7 +68,7 @@ document.onkeyArrowDown = function(e) {
   e.preventDefault()
 
   if (testKey(e)) {
-    // If user typed the ArrowRight key...
+    // If user typed the right key...
     document.querySelector('.indicator').classList.add('success')
     document.querySelector('.indicator').classList.remove('failure')
     document.querySelector('.indicator').innerHTML = 'CORRECT'
@@ -104,14 +104,14 @@ function nextKeystroke (e) {
         sequences = shuffle(sequences)
       }
 
-      // start ArrowUp the initial sequence again
+      // start up the initial sequence again
       targetSequenceIDX = 0
       targetSequence = sequences[targetSequenceIDX]
       targetKeystrokeIDX = 0
     }
   }
 
-  // Put it ArrowUp on the screen
+  // Put it up on the screen
   renderTargetSequence()
 }
 
